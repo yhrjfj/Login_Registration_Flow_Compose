@@ -4,7 +4,10 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Person
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Icon
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Text
@@ -14,16 +17,19 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.yhr.jfj.login_registration_flow_compose.R
 import com.yhr.jfj.login_registration_flow_compose.ui.theme.BgColor
 import com.yhr.jfj.login_registration_flow_compose.ui.theme.ComponentsShape
 import com.yhr.jfj.login_registration_flow_compose.ui.theme.Primary
 import com.yhr.jfj.login_registration_flow_compose.ui.theme.TextColor
+import androidx.compose.ui.R as R1
 
 @Composable
 fun NormalTextComponent(
@@ -86,6 +92,9 @@ fun MyTextFieldComponent(
         value = textValue.value,
         onValueChange = {
             textValue.value = it
+        },
+        leadingIcon = {
+            Icon(imageVector = Icons.Default.Person, contentDescription = "Person")
         }
     )
 }
