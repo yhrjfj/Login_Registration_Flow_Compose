@@ -21,6 +21,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.yhr.jfj.login_registration_flow_compose.R
+import com.yhr.jfj.login_registration_flow_compose.components.CheckboxComponent
 import com.yhr.jfj.login_registration_flow_compose.components.MyTextFieldComponent
 import com.yhr.jfj.login_registration_flow_compose.components.PasswordTextFieldComponent
 import com.yhr.jfj.login_registration_flow_compose.components.TextComponent
@@ -66,6 +67,10 @@ fun SignUpScreen() {
                 labelValue = stringResource(id = R.string.password),
                 leadingIcon = Icons.Outlined.Lock
             )
+
+            CheckboxComponent(
+                value = stringResource(id = R.string.terms_and_condition
+                ))
         }
     }
 }
