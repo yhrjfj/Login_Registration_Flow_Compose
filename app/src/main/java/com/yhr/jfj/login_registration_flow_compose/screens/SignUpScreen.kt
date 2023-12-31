@@ -7,8 +7,9 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Email
-import androidx.compose.material.icons.filled.Person
+import androidx.compose.material.icons.outlined.Email
+import androidx.compose.material.icons.outlined.Lock
+import androidx.compose.material.icons.outlined.Person
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -46,17 +47,22 @@ fun SignUpScreen() {
             Spacer(modifier = Modifier.height(20.dp))
             MyTextFieldComponent(
                 labelValue = stringResource(id = R.string.first_name),
-                leadingIcons = Icons.Default.Person
+                leadingIcons = Icons.Outlined.Person
             )
-            Spacer(modifier = Modifier.height(8.dp))
+
             MyTextFieldComponent(
                 labelValue = stringResource(id = R.string.last_name),
-                leadingIcons = Icons.Default.Person
+                leadingIcons = Icons.Outlined.Person
             )
-            Spacer(modifier = Modifier.height(8.dp))
+
             MyTextFieldComponent(
                 labelValue = stringResource(id = R.string.email),
-                leadingIcons = Icons.Default.Email
+                leadingIcons = Icons.Outlined.Email
+            )
+
+            MyTextFieldComponent(
+                labelValue = stringResource(id = R.string.password),
+                leadingIcons = Icons.Outlined.Lock
             )
         }
     }
