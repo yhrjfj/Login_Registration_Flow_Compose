@@ -10,6 +10,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.Email
 import androidx.compose.material.icons.outlined.Lock
 import androidx.compose.material.icons.outlined.Person
+import androidx.compose.material.icons.rounded.Lock
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -21,6 +22,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.yhr.jfj.login_registration_flow_compose.R
 import com.yhr.jfj.login_registration_flow_compose.components.MyTextFieldComponent
+import com.yhr.jfj.login_registration_flow_compose.components.PasswordTextFieldComponent
 import com.yhr.jfj.login_registration_flow_compose.components.TextComponent
 
 @Composable
@@ -60,9 +62,9 @@ fun SignUpScreen() {
                 leadingIcons = Icons.Outlined.Email
             )
 
-            MyTextFieldComponent(
+            PasswordTextFieldComponent(
                 labelValue = stringResource(id = R.string.password),
-                leadingIcons = Icons.Outlined.Lock
+                leadingIcon = Icons.Outlined.Lock
             )
         }
     }
