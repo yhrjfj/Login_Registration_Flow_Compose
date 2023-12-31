@@ -2,8 +2,13 @@ package com.yhr.jfj.login_registration_flow_compose.screens
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Email
+import androidx.compose.material.icons.filled.Person
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -38,8 +43,20 @@ fun SignUpScreen() {
                 fontSize = 30.sp,
                 fontWeight = FontWeight.Bold
             )
+            Spacer(modifier = Modifier.height(20.dp))
             MyTextFieldComponent(
-                labelValue = stringResource(id = R.string.first_name)
+                labelValue = stringResource(id = R.string.first_name),
+                leadingIcons = Icons.Default.Person
+            )
+            Spacer(modifier = Modifier.height(8.dp))
+            MyTextFieldComponent(
+                labelValue = stringResource(id = R.string.last_name),
+                leadingIcons = Icons.Default.Person
+            )
+            Spacer(modifier = Modifier.height(8.dp))
+            MyTextFieldComponent(
+                labelValue = stringResource(id = R.string.email),
+                leadingIcons = Icons.Default.Email
             )
         }
     }

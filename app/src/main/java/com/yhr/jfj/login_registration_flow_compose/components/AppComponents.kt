@@ -15,6 +15,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -72,7 +73,8 @@ fun TextComponent(
 
 @Composable
 fun MyTextFieldComponent(
-    labelValue: String
+    labelValue: String,
+    leadingIcons: ImageVector
 ) {
     val textValue = remember {
         mutableStateOf("")
@@ -95,7 +97,7 @@ fun MyTextFieldComponent(
             textValue.value = it
         },
         leadingIcon = {
-            Icon(imageVector = Icons.Default.Person, contentDescription = "Person")
+            Icon(imageVector = leadingIcons, contentDescription = "Person")
         }
     )
 }
