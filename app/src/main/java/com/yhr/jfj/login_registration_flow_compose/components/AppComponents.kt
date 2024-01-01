@@ -181,8 +181,7 @@ fun CheckboxComponent(
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .heightIn(56.dp)
-            .padding(16.dp),
+            .heightIn(56.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
         val checkedState = remember {
